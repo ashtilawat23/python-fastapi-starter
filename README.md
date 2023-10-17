@@ -209,4 +209,9 @@ The following classes are used to validate incoming data to the API:
   Optional Float  
   Constraints: `maximum: 1`, `minimum: 0`
 
+---
+
+Thank you for choosing this starter template for your API projects. Should you have any feedback or questions, feel free to contribute or reach out!
+
+
 
