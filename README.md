@@ -1,7 +1,5 @@
 # Python FastAPI Starter API
 
----
-
 # Tech Stack
 
 This starter template provides a robust backend setup using the following technology stack:
@@ -92,6 +90,123 @@ Execute the run.sh script to start the application:
 
 Your application should now be up and running!
 
+# Sample Endpoints
 
+All provided endpoints return JSON-compatible data.
+
+## API Root / Swagger Docs
+
+Access the interactive documentation for all endpoints.
+
+**Endpoint:** `/`
+**HTTP Method:** `GET`
+
+## API Version
+
+Fetch the current version of the API.
+
+**Endpoint:** `/version`
+**HTTP Method:** `GET`
+**Response:** `String`
+
+## Create User
+
+Add a new user to the database.
+
+**Endpoint:** `/create-user`
+**HTTP Method:** `POST`
+**Input:** `User`
+**Response:** `Bool`
+
+## Read Users
+
+Retrieve a list of users based on provided query parameters.
+
+**Endpoint:** `/read-users`
+**HTTP Method:** `PUT`
+**Input:** `Query`
+**Response:** `Array[User]`
+
+## Update Users
+
+Update existing user data based on the provided query and update parameters.
+
+**Endpoint:** `/update-users`
+**HTTP Method:** `PATCH`
+**Input:** `Query`, `Update`
+**Response:** `Bool`
+
+## Delete Users
+
+Remove users from the database based on the provided query.
+
+**Endpoint:** `/delete-users`
+**HTTP Method:** `DELETE`
+**Input:** `Query`
+**Response:** `Bool`
+
+# Sample Data Schemas
+
+The following classes are used to validate incoming data to the API:
+
+## User
+
+- **name**  
+  Required String  
+  Constraints: `maxLength: 128`, `minLength: 3`
+
+- **age**  
+  Required Integer  
+  Constraints: `maximum: 120`, `minimum: 1`
+
+- **email**  
+  Required String (`EmailStr`)
+
+- **active**  
+  Optional Boolean
+
+- **score**  
+  Required Float  
+  Constraints: `maximum: 1`, `minimum: 0`
+
+## UserQuery
+
+- **name**  
+  Optional String  
+  Constraints: `maxLength: 128`, `minLength: 3`
+
+- **age**  
+  Optional Integer  
+  Constraints: `maximum: 120`, `minimum: 1`
+
+- **email**  
+  Optional String (`EmailStr`)
+
+- **active**  
+  Optional Boolean
+
+- **score**  
+  Optional Float  
+  Constraints: `maximum: 1`, `minimum: 0`
+
+## UserUpdate
+
+- **name**  
+  Optional String  
+  Constraints: `maxLength: 128`, `minLength: 3`
+
+- **age**  
+  Optional Integer  
+  Constraints: `maximum: 120`, `minimum: 1`
+
+- **email**  
+  Optional String (`EmailStr`)
+
+- **active**  
+  Optional Boolean
+
+- **score**  
+  Optional Float  
+  Constraints: `maximum: 1`, `minimum: 0`
 
 
